@@ -19,7 +19,7 @@ while (alpha <= 'z')
 while (ALPHA <= 'Z')
 {
 	putchar(ALPHA);
-	ALPHA++
+	ALPHA++;
 
 }
 putchar('\n');
