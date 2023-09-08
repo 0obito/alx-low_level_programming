@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-char alpha = 'A';
+char alpha = 'a';
 int num = 0;
 while (num < 10)
 {
@@ -17,7 +17,7 @@ while (num < 10)
 	num++;
 }
 
-while (alpha <= 'F')
+while (alpha <= 'f')
 {
 	putchar(alpha);
 	alpha++;
