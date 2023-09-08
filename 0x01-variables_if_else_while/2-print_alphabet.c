@@ -1,16 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ *main - Entry point
  *
- * Description: prints the alphabet in lower case
+ *Description: prints the alphabet in lower case
  *
- * Return : Always 0 (Success)
+ *return : Always 0 (Success)
  */
 int main(void)
 {
 char alpha = 'a';
-while (alpha <= 'z'){
+while (alpha <= 'z')
+{
 	putchar(alpha);
 	alpha++;
 }
