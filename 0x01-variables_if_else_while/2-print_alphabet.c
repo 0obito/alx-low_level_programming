@@ -3,9 +3,9 @@
 /**
  *main - Entry point
  *
- *Description: prints the alphabet in lower case
+ * Description: prints the alphabet in lower case
  *
- *return: Always 0 (Success)
+ * return: always 0 (Success)
  */
 int main(void)
 {
@@ -16,5 +16,5 @@ while (alpha <= 'z')
 	alpha++;
 }
 putchar('\n');
-return(0);
+return (0);
 }
