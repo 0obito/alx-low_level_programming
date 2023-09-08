@@ -15,4 +15,5 @@ while (alpha <= 'z'){
 	alpha++;
 }
 putchar('\n');
+return (0);
 }
