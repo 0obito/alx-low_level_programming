@@ -17,6 +17,7 @@ while (num < 10)
 	{
 		putchar(',');
 		putchar(' ');
+	}
 	else
 		break;
 	num++;
