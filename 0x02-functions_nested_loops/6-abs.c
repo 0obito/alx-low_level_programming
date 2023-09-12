@@ -6,6 +6,8 @@
  *
  * Description: computes absolute value of an integer
  *
+ * @n: the number
+ *
  * Return: absolute value
  */
 int _abs(int n)
