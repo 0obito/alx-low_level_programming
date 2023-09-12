@@ -1,4 +1,4 @@
-# include <stdio.h>
+# include <unistd.h>
 
 /**
  * main- Entry point
@@ -9,6 +9,7 @@
  */
 int main()
 {
-write("_putchar");
-return(0);
+const char *message ="_putchar\n";
+write(1, message, 9);
+return 0;
 }
