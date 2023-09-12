@@ -4,9 +4,13 @@
 /* Declaration of the _putchar function */
 int _putchar(char c);
 
-/* Declaration of your print_alphabet function */
+/* Declaration of the  print_alphabet function */
 void print_alphabet(void);
 
-/* Declaration of your print_alphabet_x10 function */
+/* Declaration of the print_alphabet_x10 function */
 void print_alphabet_x10(void);
+#endif
+
+/* Declaration of the _islower function */
+int _islower(int c);
 #endif
