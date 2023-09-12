@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * times_table - Entry point
+ * add - Entry point
  *
  * Description: adds two integers
  *
