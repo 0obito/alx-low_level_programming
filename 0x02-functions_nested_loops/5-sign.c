@@ -5,7 +5,7 @@
  * print_sign - Entry function
  *
  * Description: Prints the sign of a number
- * 
+ *
  * @n: the number
  *
  * Return: 1 if +, 0 if 0, -1 if -
