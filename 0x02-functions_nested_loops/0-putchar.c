@@ -7,9 +7,9 @@
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
-const char *message ="_putchar\n";
+const char *message = "_putchar\n";
 write(1, message, 9);
-return 0;
+return (0);
 }
