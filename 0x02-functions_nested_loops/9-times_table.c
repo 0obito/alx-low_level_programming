@@ -16,7 +16,7 @@ void times_table(void)
         {
             int result = a * b;
 
-	    if (b = 0)
+	    if (b == 0)
 		    _putchar('0' + result);
 	    else if (b > 0 && result < 10)
             {
