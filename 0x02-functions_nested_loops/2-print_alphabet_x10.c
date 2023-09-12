@@ -20,6 +20,7 @@ while (i < 10)
 		alpha++;
 	}
 	_putchar('\n');
+	alpha = 'a';
 	i++;
 }
 }
