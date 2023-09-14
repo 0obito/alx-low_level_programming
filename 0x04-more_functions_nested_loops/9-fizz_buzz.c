@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -14,7 +13,7 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if ((i % 3 == 0) && (i % 5 == 0))
 		{
 			printf("FizzBuzz");
 		}
@@ -32,7 +31,9 @@ int main(void)
 		}
 
 		while (i < 100)
+		{
 			printf(" ");
+		}
 	}
 	return (0);
 }
