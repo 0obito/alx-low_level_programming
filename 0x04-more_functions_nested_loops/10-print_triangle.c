@@ -8,7 +8,7 @@
  *
  * @size: size of triangle
  */
-void print_triangle(int size);
+void print_triangle(int size)
 {
 	int i;
 	int j;
