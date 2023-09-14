@@ -7,4 +7,6 @@ int _isdigit(int c);
 
 int mul(int a, int b);
 
+int _putchar();
+
 #endif /* MAIN_H */
