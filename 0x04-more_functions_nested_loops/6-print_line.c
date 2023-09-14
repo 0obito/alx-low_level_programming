@@ -5,6 +5,8 @@
  * print_line - Entry point
  *
  * Description: draws a straight line
+ *
+ * @n: number of lines
  */
 void print_line(int n)
 {
