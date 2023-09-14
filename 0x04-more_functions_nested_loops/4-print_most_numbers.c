@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * function - Entry point
+ * print_most_numbers - Entry point
  *
  * Description: prints digits except for 2 and 4
  */
