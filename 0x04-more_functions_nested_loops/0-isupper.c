@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "main.h"
+11;rgb:0000/0000/0000#include "main.h"
 
 /**
  * _isupper - Entry point
@@ -16,3 +16,4 @@ int _isupper(int c)
 		return (1);
 	else
 		return (0);
+}
