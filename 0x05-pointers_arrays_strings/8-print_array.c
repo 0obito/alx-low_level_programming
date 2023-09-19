@@ -13,21 +13,28 @@
  */
 void print_array(int *a, int n)
 {
-int i;
-int tab[n];
+int i = 1;
+int j;
+int tab[500];
 
-for (i = 1; i <= n; i++)
+while (*a != '\0')
 {
-tab[i] = *s;
-s++;
+tab[i] = *a;
+i++;
+a++;
 }
+a--;
+j = i - 1;
+i = 0;
 
-for (i = 1; i <= n; i++)
+while (i <= n)
 {
 if (i != n)
 printf("%d, ", tab[i]);
 else
 printf("%d", tab[i]);
+
+i++;
 }
 
 printf("\n");
