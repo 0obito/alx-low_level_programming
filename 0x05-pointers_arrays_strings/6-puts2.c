@@ -14,11 +14,11 @@ char tab[1000];
 int i = 0;
 int j;
 
-while (*s != '\0')
+while (*str != '\0')
 {
-tab[i] = *s;
+tab[i] = *str;
 i++;
-s++;
+str++;
 }
 j = i - 1;
 for (i = 0; i <= j; i++)
