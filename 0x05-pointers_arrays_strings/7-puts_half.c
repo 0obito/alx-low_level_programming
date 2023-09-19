@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * puts2 - Entry point
+ * puts_half - Entry point
  *
- * Description: prints every other character of the string
+ * Description: prints second half of the string
  *
  * @str: the string
  */
@@ -26,7 +26,7 @@ j = i - 1;
 num = j / 2;
 while (num > 0)
 {
-_putchar(tab[i-num]);
+_putchar(tab[i - num]);
 num--;
 }
 _putchar('\n');
