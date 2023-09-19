@@ -12,6 +12,7 @@ void rev_string(char *s)
 {
 char tab[1000];
 int i = 0;
+int j;
 
 while (*s != '\0')
 {
@@ -20,7 +21,7 @@ i++;
 s++;
 }
 s--;
-int j = i - 1;
+j = i - 1;
 
 for (i = 0; i <= j; i++)
 {
