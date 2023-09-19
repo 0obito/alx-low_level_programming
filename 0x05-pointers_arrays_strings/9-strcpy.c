@@ -1,6 +1,4 @@
-#include <unistd.h>
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _strcpy - Entry point
@@ -12,32 +10,17 @@
  *
  * @src: a string
  *
- * Return: *dest
+ * Return: pointer to dest
  */
 char *_strcpy(char *dest, char *src)
 {
-int i = 1;
-int j;
-char tab[1000];
 while (*src != '\0')
 {
-tab[i] = *src;
-i++;
+*dest = *src;
+dest++;
 src++;
 }
-tab[i] = *src;
-
-j = i;
-src--;
-i = 1;
-
-while (j >= 1)
-{
-*dest = tab[i];
-i++;
-dest++;
-j--;
-}
+*dest = *src;
 
 return (dest);
 }
