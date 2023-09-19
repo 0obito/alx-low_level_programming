@@ -17,6 +17,7 @@
 char *_strcpy(char *dest, char *src)
 {
 int i = 1;
+int j;
 int tab[1000];
 
 while (*src != '\0')
@@ -25,15 +26,17 @@ tab[i] = *src;
 i++;
 src++;
 }
+i--;
+j = i;
 src--;
 i = 1;
 
-while (*src >= 1)
+while (j >= 1)
 {
 *dest = tab[i];
 i++;
 dest++;
-src--;
+j--;
 }
 
 printf("\n");
