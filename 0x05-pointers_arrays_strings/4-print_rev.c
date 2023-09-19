@@ -13,11 +13,11 @@ void print_rev(char *s)
 char tab[50];
 int i = 0;
 
-while (*str != '\0')
+while (*s != '\0')
 {
-tab[i] = *str;
+tab[i] = *s;
 i++;
-str++;
+s++;
 }
 i--;
 while (i >= 0)
