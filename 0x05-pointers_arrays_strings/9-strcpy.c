@@ -22,5 +22,5 @@ src++;
 }
 *dest = '\0';
 
-return (dest);
+return (dest_start);
 }
