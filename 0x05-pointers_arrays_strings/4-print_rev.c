@@ -10,7 +10,7 @@
  */
 void print_rev(char *s)
 {
-char tab[300];
+char tab[1000];
 int i = 0;
 
 while (*s != '\0')
