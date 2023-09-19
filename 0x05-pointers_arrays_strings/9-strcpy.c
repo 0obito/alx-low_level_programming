@@ -26,7 +26,8 @@ tab[i] = *src;
 i++;
 src++;
 }
-i--;
+tab[i] = *src;
+
 j = i;
 src--;
 i = 1;
@@ -39,6 +40,6 @@ dest++;
 j--;
 }
 
-printf("\n");
-return (*dest);
+fin = *dest;
+return (fin);
 }
