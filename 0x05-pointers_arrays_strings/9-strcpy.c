@@ -18,8 +18,8 @@ char *_strcpy(char *dest, char *src)
 {
 int i = 1;
 int j;
-int tab[1000];
-
+char tab[1000];
+char fin;
 while (*src != '\0')
 {
 tab[i] = *src;
