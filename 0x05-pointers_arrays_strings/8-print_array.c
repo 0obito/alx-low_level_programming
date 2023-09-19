@@ -14,7 +14,6 @@
 void print_array(int *a, int n)
 {
 int i = 1;
-int j;
 int tab[500];
 
 while (*a != '\0')
@@ -24,7 +23,6 @@ i++;
 a++;
 }
 a--;
-j = i - 1;
 i = 0;
 
 while (i <= n)
