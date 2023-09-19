@@ -1,0 +1,29 @@
+#include <unistd.h>
+#include "main.h"
+
+/**
+ * print_rev - Entry point
+ *
+ * Description: prints a string in reverse
+ *
+ * @s: the string
+ */
+void print_rev(char *s)
+{
+char tab[50];
+int i = 0;
+
+while (*str != '\0')
+{
+tab[i] = *str;
+i++;
+str++;
+}
+i--;
+while (i <= 0)
+{
+_putchar(tab[i]);
+i--;
+}
+_putchar('\n');
+}
