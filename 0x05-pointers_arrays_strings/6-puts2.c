@@ -8,7 +8,7 @@
  *
  * @str: the string
  */
-void puts2(char *str);
+void puts2(char *str)
 {
 char tab[1000];
 int i = 0;
