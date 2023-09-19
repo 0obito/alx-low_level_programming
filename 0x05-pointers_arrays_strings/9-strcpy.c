@@ -37,4 +37,5 @@ src--;
 }
 
 printf("\n");
+return (*dest);
 }
