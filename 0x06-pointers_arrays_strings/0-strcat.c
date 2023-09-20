@@ -9,9 +9,9 @@
  */
 char *_strcat(char *dest, char *src)
 {
-if (*dest == '\0')
-break;
-else
+char *beg_dest = dest;
+
+if (*dest != '\0')
 {
 do
 {
@@ -28,4 +28,4 @@ src++;
 }
 
 *dest = '\0';
-return (dest);
+return (beg_dest);
