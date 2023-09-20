@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcmp - entry point
+ * reverse_array - entry point
  *
  * @a: points to the array
  * @n: number of elements in the array
@@ -11,19 +11,20 @@
  */
 void reverse_array(int *a, int n)
 {
-  int i;
-  int tab[1000];
+int i;
+int j;
+int tab[1000];
 
-  for (i = 0; i < n; i++)
-    {
-      tab[i] = *a;
-      a++;
-    }
-  a--;
-  j = i - 1;
-  for (i = j; i >= 0; i--)
-    {
-      *a = tab[i];
-      a--;
-    }
+for (i = 0; i < n; i++)
+{
+tab[i] = *a;
+a++;
+}
+a--;
+j = i - 1;
+for (i = j; i >= 0; i--)
+{
+*a = tab[i];
+a--;
+}
 }
