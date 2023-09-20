@@ -11,6 +11,9 @@
  */
 void reverse_array(int *a, int n)
 {
+  int i;
+  int tab[1000];
+
   for (i = 0; i < n; i++)
     {
       tab[i] = *a;
