@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * _strncpy l- entry point
+ * _strncpy - entry point
  * description: copies a string into another with n limit of characters
  * @dest: destination string
  * @src: source string
  * @n: limit of characters to be copied
- * return: pointer to dest
+ * return: always return beg_dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -16,7 +16,7 @@ int i = 1;
 
 while (i <= n)
 {
-if(*src != '\0')
+if (*src != '\0')
 {
 *dest = *src;
 dest++;
