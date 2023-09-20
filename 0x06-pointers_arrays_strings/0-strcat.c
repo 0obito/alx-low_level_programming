@@ -2,10 +2,14 @@
 
 /**
  * _strcat - entry point
- * description: concatenates 2 strings
+ *
  * @dest: destination string
  * @src: source string
- * return: pointer to dest
+ *
+ * Description: concatenates the source string into
+ * the destination string.
+ *
+ * Return: A pointer to the destination string 'dest'.
  */
 char *_strcat(char *dest, char *src)
 {
@@ -13,11 +17,9 @@ char *beg_dest = dest;
 
 if (*dest != '\0')
 {
-do
-{
+do {
 dest++;
-}
-while (*dest != '\0');
+} while (*dest != '\0');
 }
 
 while (*src != '\0')
