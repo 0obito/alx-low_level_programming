@@ -1,17 +1,21 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _strncpy - entry point
- * description: copies a string into another with n limit of characters
+ *
  * @dest: destination string
  * @src: source string
  * @n: limit of characters to be copied
- * return: always return beg_dest
+ *
+ * Description: Copies a string into another with a limit of 'n' characters.
+ * If 'src' is shorter than 'n', the remaining characters in 'dest' are
+ * filled with null bytes ('\0'). Returns a pointer to 'dest'.
+ *
+ * Return: A pointer to the destination string 'dest'.
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-char *beg_dest = dest;
+char *destart = dest;
 int i = 1;
 
 while (i <= n)
@@ -33,5 +37,5 @@ i++;
 }
 }
 }
-return (beg_dest);
+return (destart);
 }
