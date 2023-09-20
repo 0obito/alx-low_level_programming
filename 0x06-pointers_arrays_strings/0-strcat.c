@@ -29,3 +29,4 @@ src++;
 
 *dest = '\0';
 return (beg_dest);
+}
