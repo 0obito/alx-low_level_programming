@@ -1,7 +1,8 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strncpy - entry point
+ * _strncpy l- entry point
  * description: copies a string into another with n limit of characters
  * @dest: destination string
  * @src: source string
@@ -15,7 +16,7 @@ int i = 1;
 
 while (i <= n)
 {
-if (*src != '\0')
+if(*src != '\0')
 {
 *dest = *src;
 dest++;
@@ -31,6 +32,6 @@ dest++;
 i++;
 }
 }
-
+}
 return (beg_dest);
 }
