@@ -1,4 +1,5 @@
 #include "main.h"
+#define ROTATION_AMOUNT 25
 
 /**
  * rot13 - entry point
@@ -21,7 +22,7 @@ while (i < 13 && ((*s >= 'a' && *s <= 'z') || (*s >= 'A' && *s <= 'Z')))
 {
 if (*s == 'z' || *s == 'Z')
 {
-*s = *s - 25;
+*s = *s - ROTATION_AMOUNT;
 i++;
 continue;
 }
