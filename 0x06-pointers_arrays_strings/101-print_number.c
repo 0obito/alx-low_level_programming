@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * print_number - entry point
@@ -7,5 +8,7 @@
  */
 void print_number(int n)
 {
-  _putchar('0' + n);
+int i = n;
+
+_putchar('0' + i);
 }
