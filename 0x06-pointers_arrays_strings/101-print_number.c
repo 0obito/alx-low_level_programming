@@ -4,6 +4,8 @@
 /**
  * print_number - entry point
  *
+ * @n: the big whole integer
+ *
  * Description: a normal integer printer, I guess.
  */
 void print_number(int n)
