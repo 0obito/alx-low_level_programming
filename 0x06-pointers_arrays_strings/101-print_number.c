@@ -11,7 +11,7 @@ void print_number(int n)
 if (n < 0)
 {
 _putchar('-');
-n = -n; // Make n positive
+n = -n;
 }
 if (n == 0)
 {
@@ -20,12 +20,14 @@ return;
 }
 
 int temp = n;
-while (temp > 0) {
+while (temp > 0)
+{
 temp /= 10;
 divisor *= 10;
 numDigits++;
 }
-while (divisor > 0) {
+while (divisor > 0)
+{
 int digit = n / divisor;
 _putchar('0' + digit);
 n %= divisor;
