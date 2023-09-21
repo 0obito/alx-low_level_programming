@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * print_number - entry point
@@ -10,6 +9,11 @@
  */
 void print_number(int n)
 {
+int temp;
+int divisor = 1;
+int numDigits = 0;
+int digit;
+
 if (n < 0)
 {
 _putchar('-');
@@ -21,7 +25,7 @@ _putchar('0');
 return;
 }
 
-int temp = n;
+temp = n;
 while (temp > 0)
 {
 temp /= 10;
@@ -30,7 +34,7 @@ numDigits++;
 }
 while (divisor > 0)
 {
-int digit = n / divisor;
+digit = n / divisor;
 _putchar('0' + digit);
 n %= divisor;
 divisor /= 10;
