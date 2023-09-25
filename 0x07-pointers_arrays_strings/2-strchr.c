@@ -22,5 +22,5 @@ while (*s != '\0')
 		s++;
 }
 
-return (*s);
+return (s);
 }
