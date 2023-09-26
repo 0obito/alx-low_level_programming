@@ -2,15 +2,15 @@
 #include <stdio.h>
 
 /**
- * _memcpy - Entry point
+ * _strspn - Entry point
  *
- * @dest: the destinated pointer
- * @src: the source pointer
- * @n: number of bytes to be copied
+ * @s: pointer to string
+ * @accept: the sample of bytes
  *
- * Description: Copies memory area.
+ * Description: Gets the length of a prefix substring.
  *
- * Return: A pointer to the memory area s.
+ * Return: number of bytes in the initial segment of s
+ * which consist only of bytes from accept.
  */
 unsigned int _strspn(char *s, char *accept)
 {
