@@ -24,7 +24,7 @@ int is_prime(int n, int m)
 
 /**
  * is_prime_number - Entry point.
- * 
+ *
  * Description: a function that checks
  * a given number if it is a prime number
  * or not.
@@ -35,10 +35,8 @@ int is_prime(int n, int m)
  */
 int is_prime_number(int n)
 {
-	if (n <= 0)
+	if (n <= 1)
 		return (0);
-	else if (n == 1)
-		return (1);
 	else
 		return (is_prime(n, n - 1));
 }
