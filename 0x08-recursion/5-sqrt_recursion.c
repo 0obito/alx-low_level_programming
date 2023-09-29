@@ -11,7 +11,7 @@
  *
  * Return: I myself am not so sure so far.
  */
-int _sqrt(int l, int m)
+int _sqrt(unsigned int l, unsigned int m)
 {
 	if (m <= 0)
 		return (-1);
