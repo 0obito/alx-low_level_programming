@@ -3,7 +3,7 @@
 /**
  * _pow_recursion - Entry point.
  *
- * Description: a function that returns 
+ * Description: a function that returns
  * the value of x raised to the power of y.
  *
  * @x: The base number.
