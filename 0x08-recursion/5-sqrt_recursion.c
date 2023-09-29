@@ -17,7 +17,7 @@ int _sqrt(int l, int m)
 		return (-1);
 	if (m * m == l)
 		return (m);
-	return (_sqrt(l, m - 1))
+	return (_sqrt(l, m - 1));
 }
 /**
  * _sqrt_recursion - Entry point.
