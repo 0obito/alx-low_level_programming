@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - Entry point.
+ * factorial - Entry point.
  *
- * Description: a function that returns the length of a string.
+ * Description: a function that returns the factorial of a number.
  *
- * @s: Points to a string.
+ * @n: The number.
  *
- * Return: The string's length.
+ * Return: The number's factorial.
  */
 int factorial(int n)
 {
