@@ -15,7 +15,7 @@ int _sqrt(unsigned int l, unsigned int m)
 {
 	if (m <= 0)
 		return (-1);
-	if (l / m == m)
+	if (m * m == l)
 		return (m);
 	return (_sqrt(l, m - 1));
 }
