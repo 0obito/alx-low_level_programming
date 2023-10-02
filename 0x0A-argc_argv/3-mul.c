@@ -24,21 +24,6 @@ printf("Error\n");
 return (1);
 }
 
-else if (a == 0 && strcmp("argv[1]", "0") != 0)
-{
-printf("Error\n");
-return (1);
-}
-
-else if (b == 0 && strcmp("argv[2]", "0") != 0)
-{
-printf("Error\n");
-return (1);
-}
-
-else
-{
 printf("%d\n", a * b);
 return (0);
-}
 }
