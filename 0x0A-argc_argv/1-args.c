@@ -5,12 +5,12 @@
  * @argc: contains the size of argv.
  * @argv: stores the strings given in command line.
  *
- * Description: prints the first string on the command line.
+ * Description: prints the number of arguments passed into it.
  *
  * Return: always 0.
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[] __attribute__ ((unused)))
 {
-	printf("%n\n", argc);
+	printf("%d\n", argc);
 	return (0);
 }
