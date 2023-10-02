@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
  * main - entry point
  *
@@ -12,7 +15,8 @@
  */
 int main(int argc, char *argv[])
 {
-int mul = argv[1] * argv[2];
+int a = atoi(argv[1]);
+int b = atoi(argv[2]);
 
 if (argc != 3)
 {
@@ -20,6 +24,21 @@ printf("Error\n");
 return (1);
 }
 
-printf("%d\n", mul);
+else if (a == 0 && strcmp("argv[1]", "0") != 0)
+{
+printf("Error\n");
+return (1);
+}
+
+else if (b == 0 && strcmp("argv[2]", "0") != 0)
+{
+printf("Error\n");
+return (1);
+}
+
+else
+{
+printf("%d\n", a * b);
 return (0);
+}
 }
