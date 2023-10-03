@@ -28,6 +28,5 @@ char *_strdup(char *str)
 		i++;
 		str++;
 	}
-	free
 	return (dup);
 }
