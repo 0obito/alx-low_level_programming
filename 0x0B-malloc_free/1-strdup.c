@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - entry point.
@@ -19,7 +20,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	dup = malloc(sizeof (*str));
+	dup = malloc(sizeof(char) * strlen(str));
 
 	while (*str != '\0')
 	{
@@ -27,6 +28,6 @@ char *_strdup(char *str)
 		i++;
 		str++;
 	}
-
+	free
 	return (dup);
 }
