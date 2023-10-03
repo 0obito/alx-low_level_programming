@@ -4,7 +4,8 @@
 /**
  * create_array - entry point.
  *
- * Description: creates an array of chars, and initializes it with a specific char.
+ * Description: creates an array of chars,
+ * and initializes it with a specific char.
  *
  * @size: the given size.
  *
