@@ -1,5 +1,4 @@
-
-#11;rgb:0000/0000/0000include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -20,7 +19,7 @@ int j;
 int counter = argc;
 int sum;
 
-if (argc = 1)
+if (argc == 1)
 {
 printf("0\n");
 return (0);
@@ -32,7 +31,7 @@ for (i = 1; i < counter; i++)
 while (*argv[i] != '\0')
 {
 
-if !(*argv[i] >= '0' && *argv[i] <= '9')
+if (!(*argv[i] >= '0' && *argv[i] <= '9'))
 {
 printf("Error");
 return (1);
@@ -48,4 +47,6 @@ for (j = 1; j < argc; j++)
 {
 sum = sum + argv[j];
 }
+printf("%d", sum);
+return (0);
 }
