@@ -45,7 +45,7 @@ sum = 0;
 
 for (j = 1; j < argc; j++)
 {
-sum = sum + argv[j];
+sum = sum + atoi(argv[j]);
 }
 printf("%d", sum);
 return (0);
