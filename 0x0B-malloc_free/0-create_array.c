@@ -14,10 +14,16 @@
  */
 char *create_array(unsigned int size, char c)
 {
+	int i;
 	char *ptr;
 	if (size == 0)
 		return (NULL);
 	ptr = malloc(size);
-	*ptr = c;
+
+	for (i = 0; i < size)
+	{
+	ptr[i] = c;
+	}
+
 	return (ptr);
 }
