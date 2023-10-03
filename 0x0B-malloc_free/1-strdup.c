@@ -17,21 +17,20 @@ char *_strdup(char *str)
 	unsigned int i = 0;
 	char *dup;
 
-	if (*str == '\0')
-		return (NULL);
-
-	dup = malloc(sizeof(char) *strlen(str));
+	dup = malloc(sizeof(char) * strlen(str));
 
 	if (dup == NULL)
 	{
 		return ("ERROR");
 	}
 
-	while (*str != '\0')
+	do
 	{
 		dup[i] = *str;
 		i++;
 		str++;
 	}
+	while (*str != '\0');
+
 	return (dup);
 }
