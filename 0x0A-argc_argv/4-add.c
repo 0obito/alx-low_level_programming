@@ -16,8 +16,7 @@ int main(int argc, char *argv[])
 {
 int i;
 int j;
-int counter = argc;
-int sum;
+int sum = 0;
 
 if (argc == 1)
 {
@@ -25,28 +24,26 @@ printf("0\n");
 return (0);
 }
 
-for (i = 1; i < counter; i++)
+for (i = 1; i < argc; i++)
 {
 
-while (*argv[i] != '\0')
+for (j = 0; argv[i][j]; j++)
 {
 
-if (!(*argv[i] >= '0' && *argv[i] <= '9'))
+if (argv[i][k] < '0' || argv[i][k] > '9')
 {
 printf("Error\n");
 return (1);
 }
 
-argv++;
 }
 }
 
-sum = 0;
-
-for (j = 1; j < argc; j++)
+for (k = 1; k < argc; k++)
 {
-sum = sum + atoi(argv[j]);
+sum += atoi(argv[k]);
 }
+
 printf("%d\n", sum);
 return (0);
 }
