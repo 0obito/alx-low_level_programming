@@ -33,7 +33,7 @@ while (*argv[i] != '\0')
 
 if (!(*argv[i] >= '0' && *argv[i] <= '9'))
 {
-printf("Error");
+printf("Error\n");
 return (1);
 }
 
@@ -47,6 +47,6 @@ for (j = 1; j < argc; j++)
 {
 sum = sum + atoi(argv[j]);
 }
-printf("%d", sum);
+printf("%d\n", sum);
 return (0);
 }
