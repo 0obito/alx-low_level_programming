@@ -32,9 +32,7 @@ char *argstostr(int ac, char **av)
 	for (j = 0; j < ac; j++)
 	{
 		strcat(ptr, av[j]);
-
-		if(i < ac - 1)
-			strcat(ptr, "\n");
+		strcat(ptr, "\n");
 	}
 	return (ptr);
 }
