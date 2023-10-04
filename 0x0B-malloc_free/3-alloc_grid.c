@@ -1,3 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * alloc_grid - creates a 2-dimensional array of integers.
+ *
+ * @width: width of the array.
+ * @height: height of the array.
+ *
+ * Return: a pointer to the 2D array.
+ */
 int **alloc_grid(int width, int height)
 {
 	int i;
