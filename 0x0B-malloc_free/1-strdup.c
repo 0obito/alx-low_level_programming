@@ -27,13 +27,12 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	do
+	while (*str != '\0')
 	{
 		dup[i] = *str;
 		i++;
 		str++;
 	}
-	while (*str != '\0');
 
 	return (dup);
 }
