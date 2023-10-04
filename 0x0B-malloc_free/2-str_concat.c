@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 		ptr[i] = s1[i];
 		i++;
 	}
-	while (i < len2)
+	while (i < len2 + len1)
 	{
 		ptr[i] = s2[i];
 		i++;
