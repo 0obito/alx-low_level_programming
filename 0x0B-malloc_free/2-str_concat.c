@@ -12,38 +12,55 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	int i;
-	int j;
+	int i = 0;
 
-	/* Entry checks for NULL value */
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 
-	else if (s1 != NULL && s2 != NULL)
-		ptr == malloc(strlen(s1) + strlen(s2) + 1);
+	else if (s1 != NULL && s2 == NULL)
+	{
+		ptr == malloc(sizeof(char) * strlen(s1) + 1);
+		if (ptr == NULL)
+			return (NULL);
+		while (*s1 != '\0')
+		{
+			ptr[i] = *s1;
+			i++;
+			s1++;
+		}
+		return (ptr);
+	}
 
-	else if (s1 != NULL)
-		ptr == malloc(strlen(s1) + 1);
-
+	else if (s1 == NULL && s2 != NULL)
+	{
+		ptr == malloc(sizeof(char) * strlen(s2) + 1);
+		if (ptr == NULL)
+			return (NULL);
+		while (*s2 != '\0')
+		{
+			ptr[i] = *s2;
+			i++;
+			s2++;
+		}
+		return (ptr);
+	}
 	else
-		ptr == malloc(strlen(s2) + 1);
-
-	/* Check for inappropriate amount of size */
-	if(ptr == NULL)
-		return (NULL);
-
-	for (i = 0; *s1 != '\0'; i++)
 	{
-		*ptr == *s1;
-		ptr++;
-		s1++;
+		ptr == malloc(sizeof(char) * (strlen(s1) + strlen(s2)) + 1);
+		if (ptr == NULL)
+			return (NULL);
+		while (*s1 != '\0')
+		{
+			ptr[i] == *s1;
+			s1++;
+			i++;
+		}
+		while (*s2 != '\0')
+		{
+			ptr[i] == *s2;
+			s2++;
+			i++;
+		}
+		return (ptr);
 	}
-
-	for (j = 0; *s2 != '\0'; j++)
-	{
-		*ptr == *s2;
-		ptr++;
-		s2++;
-	}
-	return (ptr);
 }
