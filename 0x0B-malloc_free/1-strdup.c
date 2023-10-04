@@ -20,8 +20,8 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	if (strlen(str) == 0)
-		return (NULL);
+	//if (strlen(str) == 0)
+	//	return (NULL);
 
 	dup = malloc(sizeof(char) * strlen(str) + 1);
 
@@ -40,3 +40,4 @@ char *_strdup(char *str)
 
 	return (dup);
 }
+
