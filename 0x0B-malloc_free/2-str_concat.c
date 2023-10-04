@@ -15,11 +15,20 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	int j;
 
+	/* Entry checks for NULL value */
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 
-	ptr == malloc(strlen(s1) + strlen(s2) + 1);
+	else if (s1 != NULL && s2 != NULL)
+		ptr == malloc(strlen(s1) + strlen(s2) + 1);
 
+	else if (s1 != NULL)
+		ptr == malloc(strlen(s1) + 1);
+
+	else
+		ptr == malloc(strlen(s2) + 1);
+
+	/* Check for inappropriate amount of size */
 	if(ptr == NULL)
 		return (NULL);
 
