@@ -17,19 +17,17 @@ char *_strdup(char *str)
 	unsigned int i = 0;
 	char *dup;
 
-	if (strlen(str) == 0)
-		return (str);
-
 	if (str == NULL)
-	{
 		return (NULL);
-	}
+
+	if (strlen(str) == 0)
+		return (NULL);
 
 	dup = malloc(sizeof(char) * strlen(str) + 1);
 
 	if (dup == NULL)
 	{
-		return ("ERROR");
+		return (NULL);
 	}
 
 	do
