@@ -23,14 +23,14 @@ char *str_concat(char *s1, char *s2)
 	if(ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < strlen(s1); i++)
+	for (i = 0; *s1 != '\0'; i++)
 	{
 		*ptr == *s1;
 		ptr++;
 		s1++;
 	}
 
-	for (j = 0; j < strlen(s2); j++)
+	for (j = 0; s2 != '\0'; j++)
 	{
 		*ptr == *s2;
 		ptr++;
