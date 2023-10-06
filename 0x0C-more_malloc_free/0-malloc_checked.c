@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+0;276;0c#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -19,7 +19,6 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == NULL)
 	{
-		free(ptr);
 		exit(98);
 	}
 
