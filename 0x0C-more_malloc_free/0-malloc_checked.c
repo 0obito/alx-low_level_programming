@@ -5,7 +5,7 @@
 /**
  * malloc_checked - entry point.
  *
- * Description: void *malloc_checked(unsigned int b).
+ * Description: allocates memory using malloc.
  *
  * @b: size for allocation.
  *
