@@ -13,15 +13,19 @@
  */
 void *malloc_checked(unsigned int b)
 {
+	unsigned int i = 0;
 	void *p = malloc(b);
 
 	if (p == NULL)
 	{
-		free(*p);
+		while (p[i] != '\0')
+		{
+			free(p[i]);
+			i++;
+		}
 		free(p);
 		exit(98);
 	}
 
 	return (p);
 }
-
