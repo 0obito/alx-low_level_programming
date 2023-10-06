@@ -13,17 +13,13 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	unsigned int i = 0;
-	void *p = malloc(b);
+	void *ptr;
 
-	if (p == NULL)
+	ptr = malloc(b);
+
+	if (ptr == NULL)
 	{
-		while (p[i] != '\0')
-		{
-			free(p[i]);
-			i++;
-		}
-		free(p);
+		free(ptr);
 		exit(98);
 	}
 
