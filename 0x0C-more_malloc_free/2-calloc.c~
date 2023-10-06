@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * _calloc - entry point
+ *
+ * @nmemb:
+ * @size:
+ *
+ * Description:
+ *
+ * Return:
+ */
