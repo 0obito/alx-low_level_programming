@@ -22,32 +22,103 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int k;
 	char *str;
 
-	/* Allocating space to str in the memory */
-	if (n < strlen(s2))
+	if (s1 == NULL && s2 == NULL)
 	{
-	str = malloc(sizeof(*str) * (strlen(s1) + n + 1));
-		k = n;
+		str = malloc(sizeof(*str) * 1);
+		if (str == NULL)
+			return (NULL);
+
+		str[0] = '\0';
+		return (str);
+	}
+	else if (s2 == NULL)
+	{
+		str = malloc(sizeof(*str) * (strlen(s1) + 1));
+		if (str == NULL)
+			return (NULL);
+
+		for (i = 0; i < strlen(s1); i++)
+		{
+			str[i] = s1[i];
+		}
+		str[i] = '\0';
+
+		return (str);
+	}
+	else if (s1 == NULL)
+	{
+		if (strlen(s2) <= n)
+		{
+			str = malloc(sizeof(*str) * (strlen(s2) + 1));
+			if (str == NULL)
+				return (NULL);
+
+			for (i = 0; i < strlen(s2); i++)
+			{
+				str[i] = s2[i];
+			}
+			str[i] = '\0';
+
+			return (str);
+		}
+		else
+		{
+			str = malloc(sizeof(*str) * (n + 1));
+			if (str == NULL)
+				return (NULL);
+
+			for (i = 0; i < n; i++)
+			{
+				str[i] = s2[i];
+			}
+			str[i] = '\0';
+
+			return (str);
+		}
 	}
 	else
 	{
-	str = malloc(sizeof(*str) * (strlen(s1) + strlen(s2) + 1));
-		k = strlen(s2);
+		if (strlen(s2) <= n)
+		{
+			str = malloc(sizeof(*str) * (strlen(s1) + strlen(s2) + 1));
+			if (str == NULL)
+				return (NULL);
+
+			for (i = 0; i < strlen(s1); i++)
+			{
+				str[i] = s1[i];
+			}
+
+			for (j = 0; j < strlen(s2); j++)
+			{
+				str[i] = s2[j];
+				i++;
+			}
+
+			str[i] = '\0';
+
+			return (str);
+		}
+		else
+		{
+			str = malloc(sizeof(*str) * (strlen(s1) + n + 1));
+			if (str == NULL)
+				return (NULL);
+
+			for (i = 0; i < strlen(s1); i++)
+			{
+				str[i] = s1[i];
+			}
+
+			for (j = 0; j < n; j++)
+			{
+				str[i] = s2[j];
+				i++;
+			}
+
+			str[i] = '\0';
+
+			return (str);
+		}
 	}
-
-	/* Checking if the function fails */
-	if (str == NULL)
-		return (NULL);
-
-	for (i = 0; i < strlen(s1); i++)
-	{
-		str[i] = s1[i];
-	}
-
-	for (j = 0; j < k; j++)
-	{
-		str[i] = s2[j];
-		i++;
-	}
-
-	return (str);
 }
