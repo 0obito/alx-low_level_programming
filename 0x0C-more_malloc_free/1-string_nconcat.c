@@ -19,7 +19,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
 	unsigned int j;
-	unsigned int k;
 	char *str;
 
 	if (s1 == NULL && s2 == NULL)
