@@ -10,6 +10,9 @@
  */
 char *strcat_both(char *str)
 {
+	if (str == NULL)
+		return (NULL);
+	str[0] = '\0';
 	return (str);
 }
 
@@ -23,6 +26,8 @@ char *strcat_two(char *str, char *s1)
 {
 	unsigned int i;
 
+	if (str == NULL)
+		return (NULL);
 	for (i = 0; i < strlen(s1); i++)
 		str[i] = s1[i];
 	str[i] = '\0';
@@ -39,6 +44,8 @@ char *strcat_one(char *str, char *s2, unsigned int size)
 {
 	unsigned int i;
 
+	if (str == NULL)
+		return (NULL);
 	for (i = 0; i < size; i++)
 		str[i] = s2[i];
 	str[i] = '\0';
@@ -56,6 +63,8 @@ char *strcat_none(char *str, char *s1, char *s2, unsigned int size)
 	unsigned int i;
 	unsigned int j;
 
+	if (str == NULL)
+		return (NULL);
 	for (i = 0; i < strlen(s1); i++)
 		str[i] = s1[i];
 	for (j = 0; j < size; j++)
