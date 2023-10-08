@@ -22,8 +22,7 @@ char *strcat_both(char *str)
  *
  * Return: filled string.
  */
-char *strcat_two(char *str, char *s1)
-{
+char *strcat_two(char *str, char *s1) {
 	unsigned int i;
 
 	if (str == NULL)
