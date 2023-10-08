@@ -79,7 +79,8 @@ char *strcat_none(char *str, char *s1, char *s2, unsigned int size)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str, *both, *two, *ones, *onen, *nonen, *nones;
+	unsigned int holder;
+	char *str, *both, *two, *one, *nonen, *nones;
 
 	if (s1 == NULL && s2 == NULL)
 	{
@@ -96,17 +97,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			return (two);
 		}
 		if (s1 == NULL && n >= strlen(s2))
-		{
-			str = malloc(sizeof(*str) * (strlen(s2) + 1));
-			ones = strcat_one(str, s2, strlen(s2));
-			return (ones);
-		}
+			holder = strlen(s2);
 		if (s1 == NULL && n < strlen(s2))
-		{
-			str = malloc(sizeof(*str) * (n + 1));
-			onen = strcat_one(str, s2, n);
-			return (onen);
-		}
+			holder = n;
+		str = malloc(sizeof(*str) * (holder + 1));
+		one = strcat_one(str, s2, holder);
+		return (one);
 	}
 	else
 	{
