@@ -5,7 +5,7 @@
 /**
  * strcat_both - fills the string if both
  * strings are NULL
- *
+ * @str: string.
  * Return: filled string.
  */
 char *strcat_both(char *str)
@@ -18,7 +18,8 @@ char *strcat_both(char *str)
 /**
  * strcat_two - fills the string if
  * string s2 is NULL
- *
+ * @str: string.
+ * @s1: string one.
  * Return: filled string.
  */
 char *strcat_two(char *str, char *s1)
@@ -35,7 +36,9 @@ char *strcat_two(char *str, char *s1)
 /**
  * strcat_one - fills the string if
  * string s1 is NULL
- *
+ * @str: string.
+ * @s2: string two.
+ * @size: the size.
  * Return: filled string.
  */
 char *strcat_one(char *str, char *s2, unsigned int size)
@@ -52,7 +55,10 @@ char *strcat_one(char *str, char *s2, unsigned int size)
 /**
  * strcat_none - fills the string if
  * neither of the strings is NULL
- *
+ * @str: string.
+ * @s1:string one.
+ * @s2:string two.
+ * @size: the size.
  * Return: filled string.
  */
 char *strcat_none(char *str, char *s1, char *s2, unsigned int size)
