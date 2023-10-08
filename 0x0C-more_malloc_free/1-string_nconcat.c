@@ -83,13 +83,7 @@ char *strcat_none(char *str, char *s1, char *s2, unsigned int size)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
-	char *both;
-	char *two;
-	char *ones;
-	char *onen;
-	char *nonen;
-	char *nones;
+	char *str, *both, *two, *ones, *onen, *nonen, *nones;
 
 	if (s1 == NULL && s2 == NULL) {
 		str = malloc(sizeof(*str) * 1);
