@@ -8,8 +8,7 @@
  *
  * Return: filled string.
  */
-char *strcat_both(char *str)
-{
+char *strcat_both(char *str){
 	if (str == NULL)
 		return (NULL);
 	str[0] = '\0';
