@@ -3,8 +3,9 @@
 /**
  * main - entry point.
  */
-void main()
+int main()
 {
-	printf("%s\n", __FILE__);
-	return ();
+	printf("%s", __FILE__);
+	printf("\n");
+	return (0);
 }
