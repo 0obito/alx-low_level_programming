@@ -13,9 +13,8 @@ void print_dog(struct dog *d) {
         struct dog *dog_ptr = malloc(sizeof(struct dog));
         if (dog_ptr == NULL)
 	{
-	exit(1);
+	exit(EXIT_FAILURE);
 	}
-        
         dog_ptr->name = (d->name != NULL) ? d->name : NULL;
         dog_ptr->age = d->age;
         dog_ptr->owner = (d->owner != NULL) ? d->owner : NULL;
