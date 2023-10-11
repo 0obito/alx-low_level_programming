@@ -15,17 +15,17 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error\n");
+		printf("Error1\n");
 		exit(98);
 	}
 	if (get_op_func(argv[2]) == NULL)
 	{
-		printf("Error\n");
+		printf("Error2\n");
 		exit(99);
 	}
 	if (argv[2][0] == '/' && argv[3][0] == '0')
 	{
-		printf("Error\n");
+		printf("Error3\n");
 		exit(100);
 	}
 
