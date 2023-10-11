@@ -12,13 +12,18 @@
 int main(int argc, char *argv[])
 {
 	int a, b, result;
+	char *opera;
+	int (*operation_func)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error1\n");
 		exit(98);
 	}
-	if (get_op_func(argv[2][0]) == NULL)
+	opera = argv[2];
+	operation_func = get_op_func(opera);
+
+	if (operation_func == NULL)
 	{
 		printf("Error2\n");
 		exit(99);
@@ -31,7 +36,7 @@ int main(int argc, char *argv[])
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	result = (get_op_func(argv[2]))(a, b);
+	result = operation_func(a, b);
 
 	return (result);
 }
