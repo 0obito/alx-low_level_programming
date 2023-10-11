@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error1\n");
+		printf("Error\n");
 		exit(98);
 	}
 	opera = argv[2];
@@ -25,12 +25,12 @@ int main(int argc, char *argv[])
 
 	if (operation_func == NULL)
 	{
-		printf("Error2\n");
+		printf("Error\n");
 		exit(99);
 	}
 	if (argv[2][0] == '/' && argv[3][0] == '0')
 	{
-		printf("Error3\n");
+		printf("Error\n");
 		exit(100);
 	}
 
