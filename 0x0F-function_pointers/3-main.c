@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error1\n");
 		exit(98);
 	}
-	if (get_op_func(argv[2]) == NULL)
+	if (get_op_func(argv[2][0]) == NULL)
 	{
 		printf("Error2\n");
 		exit(99);
