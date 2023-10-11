@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "3-calc.h"
 
 /**
@@ -11,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, b, result;
+	int a, b, cmp1, cmp2, cmp3, result;
 	char *opera;
 	int (*operation_func)(int, int);
 
@@ -28,7 +29,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if (argv[2][0] == '/' && argv[3][0] == '0')
+	cmp1 = strcmp(argv[2], "/");
+	cmp2 = strcmp(argv[2], "%");
+	cmp3 = strcmp(argv[3], "0");
+	if ((cmp1 == 0 && cmp3 == 0) || (cmp2 == 0 && cmp3 == 0))
 	{
 		printf("Error\n");
 		exit(100);
