@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, b, cmp1, cmp2, cmp3, result;
+	int a, b, cmp1, cmp2, result;
 	char *opera;
 	int (*operation_func)(int, int);
 
@@ -29,17 +29,18 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	cmp1 = strcmp(argv[2], "/");
-	cmp2 = strcmp(argv[2], "%");
-	cmp3 = strcmp(argv[3], "0");
-	if ((cmp1 == 0 && cmp3 == 0) || (cmp2 == 0 && cmp3 == 0))
+
+	cmp1 = strcmp(opera, "/");
+	cmp2 = strcmp(opera, "%");
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	if ((cmp1 == 0 && b == 0) || (cmp2 == 0 && b == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
 	result = operation_func(a, b);
 
 	printf("%d\n", result);
