@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "calc.h"
+#include "3-calc.h"
 
 /**
  * op-add - addition operation.
@@ -7,7 +7,7 @@
  * @b: 2nd integer.
  * Return: Operation result.
  */
-int op_add(int a, int b);
+int op_add(int a, int b)
 {
 	return (a + b);
 }
@@ -18,7 +18,7 @@ int op_add(int a, int b);
  * @b: 2nd integer.
  * Return: Operation result.
  */
-int op_sub(int a, int b);
+int op_sub(int a, int b)
 {
 	return (a - b);
 }
@@ -29,7 +29,7 @@ int op_sub(int a, int b);
  * @b: 2nd integer.
  * Return: Operation result.
  */
-int op_mul(int a, int b);
+int op_mul(int a, int b)
 {
 	return (a * b);
 }
@@ -40,7 +40,7 @@ int op_mul(int a, int b);
  * @b: 2nd integer.
  * Return: Operation result.
  */
-int op_div(int a, int b);
+int op_div(int a, int b)
 {
 	return (a / b);
 }
@@ -51,7 +51,7 @@ int op_div(int a, int b);
  * @b: 2nd integer.
  * Return: Operation result.
  */
-int op_mod(int a, int b);
+int op_mod(int a, int b)
 {
 	return (a % b);
 }
