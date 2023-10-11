@@ -38,5 +38,6 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	result = operation_func(a, b);
 
-	return (result);
+	printf("%d\n", result);
+	return (0);
 }
