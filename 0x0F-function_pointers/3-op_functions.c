@@ -2,7 +2,7 @@
 #include "3-calc.h"
 
 /**
- * op-add - addition operation.
+ * op_add - addition operation.
  * @a: 1st integer.
  * @b: 2nd integer.
  * Return: Operation result.
@@ -13,7 +13,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op-sub - substraction operation.
+ * op_sub - substraction operation.
  * @a: 1st integer.
  * @b: 2nd integer.
  * Return: Operation result.
@@ -24,7 +24,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * op-mul - multiplication operation.
+ * op_mul - multiplication operation.
  * @a: 1st integer.
  * @b: 2nd integer.
  * Return: Operation result.
@@ -35,7 +35,7 @@ int op_mul(int a, int b)
 }
 
 /**
- * op-div - division operation.
+ * op_div - division operation.
  * @a: 1st integer.
  * @b: 2nd integer.
  * Return: Operation result.
@@ -46,7 +46,7 @@ int op_div(int a, int b)
 }
 
 /**
- * op-mod - modulo operation.
+ * op_mod - modulo operation.
  * @a: 1st integer.
  * @b: 2nd integer.
  * Return: Operation result.
