@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 
 /**
- * sum_the_all - sums indefinite integers.
+ * sum_them_all - sums indefinite integers.
  * @n: count of arguments
  *
  * Return: Sum of all arguments.
@@ -20,7 +20,7 @@ int sum_them_all(const unsigned int n, ...)
 	for(i = 0; i < n; i++)
 	{
 		temp = va_arg(args, int);
-		s += temp;
+		s = s + temp;
 	}
 	va_end(args);
 
