@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
 
@@ -15,7 +16,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	int temp;
 
 	if (n == 0)
-		exit(void);
+		exit(98);
 	va_start(numbers, n);
 	for (i = 0; i < n ; i++)
 	{
