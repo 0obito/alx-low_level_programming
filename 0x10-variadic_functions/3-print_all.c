@@ -5,19 +5,6 @@
 #include "variadic_functions.h"
 
 /**
- * is_it - check for NULL pointer.
- *
- * @str: pointer to the checked string.
- */
-void is_it(char *str)
-{
-	if (str == NULL)
-		printf("(nil)");
-	else
-		printf("%s", str);
-}
-
-/**
  * print_all - prints all types.
  *
  * @format: containts formats to print.
@@ -38,25 +25,28 @@ void print_all(const char * const format, ...)
 		switch (format[counter])
 		{
 		case 'i':
-			huh = 1;
 			i = va_arg(args, int);
 			printf("%d", i);
 			break;
 		case 'f':
-			huh = 1;
 			f = va_arg(args, double);
 			printf("%f", f);
 			break;
 		case 'c':
-			huh = 1;
 			c = va_arg(args, int);
 			printf("%c", c);
 			break;
 		case 's':
-			huh = 1;
 			str = va_arg(args, char *);
-			is_it(str);
+			if (str == NULL)
+			{
+				printf("(nil)");
+				break;
+			}
+			printf("%s", str);
 			break;
+		default:
+			huh = 1;
 		}
 		counter++;
 		if (counter < len && huh == 1)
