@@ -9,7 +9,7 @@
  *
  * @str: the checked string.
  */
-void isitnull(char *str)
+void is_it(char *str)
 {
 	if (str == NULL)
 		printf("(nil)");
@@ -24,7 +24,7 @@ void isitnull(char *str)
  * @len: length.
  * @counter: counter.
  */
-void separator(unsigned int huh, unsigned int len, unsigned int counter)
+void sepa(unsigned int huh, unsigned int len, unsigned int counter)
 {
 	if (counter < len && huh == 1)
 		printf(", ");
@@ -68,11 +68,11 @@ void print_all(const char * const format, ...)
 		case 's':
 			huh = 1;
 			str = va_arg(args, char *);
-			isitnull(str);
+			is_it(str);
 			break;
 		}
 		counter++;
-		separator(huh, len, counter);
+		sepa(huh, len, counter);
 	}
 	va_end(args);
 	printf("\n");
