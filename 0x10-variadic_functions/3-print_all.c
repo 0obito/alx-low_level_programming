@@ -5,6 +5,32 @@
 #include "variadic_functions.h"
 
 /**
+ * isitnull - check for NULL pointer.
+ *
+ * @str: the checked string.
+ */
+void isitnull(char *str)
+{
+	if (str == NULL)
+		printf("(nil)");
+	else
+		printf("%s", str);
+}
+
+/**
+ * separator - prints a separator when needed.
+ *
+ * @huh: huh.
+ * @len: length.
+ * @counter: counter.
+ */
+void separator(unsigned int huh, unsigned int len, unsigned int counter)
+{
+	if (counter < len && huh == 1)
+		printf(", ");
+}
+
+/**
  * print_all - prints all types.
  *
  * @format: containts formats to print.
@@ -42,12 +68,11 @@ void print_all(const char * const format, ...)
 		case 's':
 			huh = 1;
 			str = va_arg(args, char *);
-			printf("%s", str);
+			isitnull(str);
 			break;
 		}
 		counter++;
-		if (counter < len && huh == 1)
-			printf(", ");
+		separator(huh, len, counter);
 	}
 	va_end(args);
 	printf("\n");
