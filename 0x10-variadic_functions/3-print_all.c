@@ -11,16 +11,14 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int counter = 0;
-	unsigned int huh;
+	unsigned int huh, counter = 0, len = strlen(format);
 	int i;
 	float f;
 	char c;
 	char *str;
-	size_t format_len = strlen(format);
 	va_list args;
 	va_start(args, format);
-	while (counter < format_len)
+	while (counter < len)
 	{
 		huh = 0;
 		switch (format[counter])
@@ -32,12 +30,12 @@ void print_all(const char * const format, ...)
 			break;
 		case 'f':
 			huh = 1;
-			f = va_arg(args, double); // Use double instead of float for va_arg
+			f = va_arg(args, double);
 			printf("%f", f);
 			break;
 		case 'c':
 			huh = 1;
-			c = va_arg(args, int); // Use int for va_arg
+			c = va_arg(args, int);
 			printf("%c", c);
 			break;
 		case 's':
@@ -47,9 +45,8 @@ void print_all(const char * const format, ...)
 			break;
 		}
 		counter++;
-
-		if (counter < format_len && huh == 1)
-		printf(", ");
+		if (counter < len && huh == 1)
+			printf(", ");
 	}
 	va_end(args);
 	printf("\n");
