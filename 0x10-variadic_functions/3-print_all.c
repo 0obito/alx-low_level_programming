@@ -49,7 +49,7 @@ void print_all(const char * const format, ...)
 			huh = 1;
 		}
 		counter++;
-		if (counter < len && huh == 1)
+		if (counter < len && huh == 0)
 			printf(", ");
 	}
 	va_end(args);
