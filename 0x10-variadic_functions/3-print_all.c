@@ -5,9 +5,9 @@
 #include "variadic_functions.h"
 
 /**
- * isitnull - check for NULL pointer.
+ * is_it - check for NULL pointer.
  *
- * @str: the checked string.
+ * @str: pointer to the checked string.
  */
 void is_it(char *str)
 {
@@ -15,19 +15,6 @@ void is_it(char *str)
 		printf("(nil)");
 	else
 		printf("%s", str);
-}
-
-/**
- * separator - prints a separator when needed.
- *
- * @huh: huh.
- * @len: length.
- * @counter: counter.
- */
-void sepa(unsigned int huh, unsigned int len, unsigned int counter)
-{
-	if (counter < len && huh == 1)
-		printf(", ");
 }
 
 /**
@@ -72,7 +59,8 @@ void print_all(const char * const format, ...)
 			break;
 		}
 		counter++;
-		sepa(huh, len, counter);
+		if (counter < len && huh == 1)
+			printf(", ");
 	}
 	va_end(args);
 	printf("\n");
