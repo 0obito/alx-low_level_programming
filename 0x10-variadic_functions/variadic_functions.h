@@ -7,5 +7,5 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 void separator(unsigned int huh, unsigned int len, unsigned int counter);
-void isitnull(*str);
+void isitnull(char *str);
 #endif
