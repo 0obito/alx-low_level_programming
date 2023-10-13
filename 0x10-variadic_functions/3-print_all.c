@@ -18,6 +18,7 @@ void print_all(const char * const format, ...)
 	char *str;
 	va_list args;
 	va_start(args, format);
+
 	while (counter < len)
 	{
 		huh = 0;
