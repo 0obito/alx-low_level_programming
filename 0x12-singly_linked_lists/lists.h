@@ -26,6 +26,5 @@ void free_list(list_t *head);
 
 
 int _putchar(char c);
-void print_number(unsigned int len);
 
 #endif /* LISTS_H */
