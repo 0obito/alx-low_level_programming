@@ -16,7 +16,7 @@ size_t print_list(const list_t *h)
 	list_t *hDup;
 
 	if (h == NULL)
-		return (-1);
+		return (0);
 
 	hDup = malloc(sizeof(list_t));
 
