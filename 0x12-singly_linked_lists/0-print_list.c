@@ -21,7 +21,7 @@ size_t print_list(const list_t *h)
 	do {
 
 	if (h->str == NULL)
-		write(1, null_s, s_len);
+	  printf();
 	else
 	{
 		write(1, "[", 1);
@@ -37,30 +37,4 @@ size_t print_list(const list_t *h)
 	} while (h != NULL);
 
 	return (count);
-}
-
-/**
- * print_number - prints a number.
- *
- * @len: the number to print.
- */
-void print_number(unsigned int len)
-{
-
-	if (len / 10 != 0)
-		print_number(len / 10);
-
-	_putchar(len % 10 + '0');
-}
-
-/**
- * _putchar - writes a character.
- *
- * @c: the character.
- *
- * Return: number of characters written.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
 }
