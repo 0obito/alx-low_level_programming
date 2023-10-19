@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * print_list - calculates the number of elements in a list.
+ * list_len - calculates the number of elements in a list.
  *
  * @h: pointer to the head node.
  *
