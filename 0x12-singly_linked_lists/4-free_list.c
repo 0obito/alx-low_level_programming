@@ -6,18 +6,21 @@
 /**
  * free_list - frees a list_t list.
  *
- * @head: address of the head pointer.
+ * @head: pointer to the head of the list.
  */
 void free_list(list_t *head)
 {
-	list_t *temp;
+	list_t *temp, *next;
 
-	while (head != NULL)
+	temp = head;
+
+	while (temp != NULL)
 	{
-		temp = head;
-		head = head->next;
+	next = temp->next;
 
-		free(temp->str);
-		free(temp);
+	free(temp->str);
+	free(temp);
+
+	temp = next;
 	}
 }
