@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
 
@@ -9,13 +8,13 @@
  */
 void free_list(list_t *head)
 {
-	list_t *current;
+	list_t *tmp;
 
 	while (head != NULL)
 	{
-	current = head;
-	head = head->next;
-	free(current->str);
-	free(current);
+	tmp = head->next;
+	free(head->next);
+	free(head);
+	head = temp;
 	}
 }
