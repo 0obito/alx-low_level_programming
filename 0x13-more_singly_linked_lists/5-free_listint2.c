@@ -12,12 +12,15 @@ void free_listint2(listint_t **head)
 	listint_t *tempo;
 	listint_t *current = *head;
 
-	while (current != NULL)
+	if (current != NULL)
 	{
-		tempo = current;
-		current = current->next;
+		while (current != NULL)
+		{
+			tempo = current;
+			current = current->next;
 
-		free(tempo);
+			free(tempo);
+		}
+		*head = NULL;
 	}
-	*head = NULL;
 }
