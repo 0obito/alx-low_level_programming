@@ -11,6 +11,9 @@ void free_listint2(listint_t **head)
 {
 	listint_t *tempo;
 
+	if (*head == NULL)
+		exit(98);
+
 	while (*head != NULL)
 	{
 		tempo = *head;
