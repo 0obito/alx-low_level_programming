@@ -22,10 +22,16 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	nuevo->n = n;
 	nuevo->next = NULL;
 
-	while (tempo != NULL)
+	if (*head == NULL)
+	{
+		*head = nuevo;
+		return (nuevo);
+	}
+
+	while (tempo->next != NULL)
 		tempo = tempo->next;
 
-	*tempo = *nuevo;
+	tempo = nuevo;
 
 	return (nuevo);
 }
