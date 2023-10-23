@@ -31,7 +31,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	while (tempo->next != NULL)
 		tempo = tempo->next;
 
-	tempo = nuevo;
+	tempo->next = nuevo;
 
 	return (nuevo);
 }
