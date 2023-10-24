@@ -7,7 +7,7 @@
  * at a given position
  *
  * @head: head pointer
- * @idx: index
+ * @index: index
  *
  * Return: 1 if success, -1 otherwise
  */
