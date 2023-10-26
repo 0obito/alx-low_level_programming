@@ -13,7 +13,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int check;
+	unsigned long int check;
 	unsigned long int bit = sizeof(n) * 8 - 1;
 	unsigned long int mask;
 
@@ -25,6 +25,6 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	if (check == mask)
 		return (1);
-	return (0);
 
+	return (0);
 }
