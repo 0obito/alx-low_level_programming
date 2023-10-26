@@ -3,13 +3,14 @@
 #include "main.h"
 
 /**
- * clear_bit - sets the value
- * of a bit at a given index to 0
+ * flip_bits - counts the the number
+ * of bits we would need to flip to
+ * get from a number to another
  *
- * @n: the number in decimal
- * @index: the index to search for
+ * @n: first number in decimal
+ * @m: second number in decimal
  *
- * Return: 1 if succeded, -1 otherwise
+ * Return: the number of bit flips needed
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
@@ -19,7 +20,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	while (xor != 0)
 	{
 		if (xor & 1)
-			count ++;
+			count++;
 		xor >>= 1;
 	}
 
