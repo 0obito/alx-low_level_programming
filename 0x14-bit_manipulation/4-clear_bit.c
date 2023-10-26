@@ -14,19 +14,13 @@
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int bit = sizeof(n) * 8 - 1;
-	unsigned long int mask = 0;
-	unsigned long int i;
+	unsigned long int mask = 1;
 
 	if (index > bit)
 		return (-1);
 
-	for (i = 0; i < index; i++)
-	{
-		mask << 1;
-		mask += 1;
-
-	}
-	*n = *n | mask;
+	mask <<= index;
+	*n = *n & ~mask;
 
 	return (1);
 }
