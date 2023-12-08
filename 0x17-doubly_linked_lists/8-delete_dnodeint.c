@@ -7,7 +7,7 @@
  * removes a node at a given position.
  *
  * @head: the header of a list.
- * @idx: the node index.
+ * @index: the node index.
  *
  * Return: 1 if it succeeded, -1 if it failed.
  */
