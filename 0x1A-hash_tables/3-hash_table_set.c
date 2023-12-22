@@ -38,6 +38,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(cle);
 		return (0);
 	}
+
+	temp = ht->array[index];
+	while (temp != NULL)
+	{
+		if (strcmp(key, temp->key) == 0)
+		{
+			free(temp->value);
+			temp->value = buffer;
+			break;
+		}
+		temp = temp->next;
+	}
+
 	node->key = cle;
 	node->value = buffer;
 	node->next = NULL;
@@ -46,7 +59,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = node;
 	else
 	{
-		temp = ht->array[index];
 		node->next = temp;
 		ht->array[index] = node;
 	}
