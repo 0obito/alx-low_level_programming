@@ -12,12 +12,12 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index, size;
+	int ret;
 	char *buffer, *cle;
-	hash_node_t *node, *temp = NULL;
+	hash_node_t *node = NULL, *temp = NULL;
 
 	if (key == NULL || value == NULL || ht == NULL)
 		return (0);
-
 	buffer = strdup(value);
 	if (buffer == NULL)
 		return (0);
@@ -25,14 +25,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (cle == NULL)
 	{
 		free(buffer);
-		return (0);
-	}
-
-	node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
-	{
-		free(buffer);
-		free(cle);
 		return (0);
 	}
 
@@ -52,9 +44,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		temp = temp->next;
 	}
 
-	node->key = cle;
-	node->value = buffer;
-	node->next = NULL;
+	ret = node_allocate(node, buffer, cle);
+	if (ret == 0)
+		return (0);
+	add_node(ht, index, node);
+	return (1);
+}
+
+/**
+ * add_node - adds a node to a structure.
+ *
+ * @ht: hash table.
+ * @index: the index.
+ * @node: the node.
+ */
+void add_node(hash_table_t *ht, unsigned long int index, hash_node_t *node)
+{
+	hash_node_t *temp = NULL;
 
 	if (ht->array[index] == NULL)
 		ht->array[index] = node;
@@ -64,6 +70,31 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		node->next = temp;
 		ht->array[index] = node;
 	}
+}
+
+/**
+ * node_allocate - allocates
+ * memory for a node and fills it.
+ *
+ * @node: the node.
+ * @buffer: a duplicate of value.
+ * @cle: a duplicate of key.
+ *
+ * Return: 1 in success, 0 otherwise.
+ */
+int node_allocate(hash_node_t *node, char *buffer, char *cle)
+{
+	node = malloc(sizeof(hash_node_t));
+	if (node == NULL)
+	{
+		free(buffer);
+		free(cle);
+		return (0);
+	}
+
+	node->key = cle;
+	node->value = buffer;
+	node->next = NULL;
 
 	return (1);
 }
