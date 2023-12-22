@@ -32,9 +32,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	node = malloc(sizeof(hash_node_t));
-	if (temp == NULL)
+	if (node == NULL)
 	{
 		free(buffer);
+		free(cle);
 		return (0);
 	}
 	node->key = cle;
@@ -46,8 +47,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		temp = ht->array[index];
+		node->next = temp;
 		ht->array[index] = node;
-		ht->array[index]->next = temp;
 	}
 
 	return (1);
