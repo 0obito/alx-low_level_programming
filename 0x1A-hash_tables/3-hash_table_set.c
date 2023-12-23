@@ -44,10 +44,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		temp = temp->next;
 	}
 
-	ret = node_allocate(node, buffer, cle);
+	ret = node_allocate(&node, buffer, cle);
 	if (ret == 0)
 		return (0);
-	add_node(ht, index, node);
+	ret = add_node(ht, index, node);
+	if (ret == 0)
+		return (0);
 	return (1);
 }
 
@@ -57,10 +59,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * @ht: hash table.
  * @index: the index.
  * @node: the node.
+ *
+ * Return: 1 in sucess, 0 otherwise.
  */
-void add_node(hash_table_t *ht, unsigned long int index, hash_node_t *node)
+int add_node(hash_table_t *ht, unsigned long int index, hash_node_t *node)
 {
 	hash_node_t *temp = NULL;
+
+	if (node == NULL)
+	{
+		free(node->value);
+		free(node->key);
+		return (0);
+	}
 
 	if (ht->array[index] == NULL)
 		ht->array[index] = node;
@@ -70,6 +81,8 @@ void add_node(hash_table_t *ht, unsigned long int index, hash_node_t *node)
 		node->next = temp;
 		ht->array[index] = node;
 	}
+
+	return (1);
 }
 
 /**
@@ -82,19 +95,19 @@ void add_node(hash_table_t *ht, unsigned long int index, hash_node_t *node)
  *
  * Return: 1 in success, 0 otherwise.
  */
-int node_allocate(hash_node_t *node, char *buffer, char *cle)
+int node_allocate(hash_node_t **node, char *buffer, char *cle)
 {
-	node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
+	*node = malloc(sizeof(hash_node_t));
+	if (*node == NULL)
 	{
 		free(buffer);
 		free(cle);
 		return (0);
 	}
 
-	node->key = cle;
-	node->value = buffer;
-	node->next = NULL;
+	(*node)->key = cle;
+	(*node)->value = buffer;
+	(*node)->next = NULL;
 
 	return (1);
 }
