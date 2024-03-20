@@ -12,6 +12,8 @@ def island_perimeter(grid):
     count = 0
     if isinstance(grid, list):
         for i in grid:
+            if not isinstance(i, list):
+                raise TypeError("grid must be a list of lists")
             for j in i:
                 if j == 1:
                     count += 1
@@ -19,3 +21,5 @@ def island_perimeter(grid):
             return count
         else:
             return count*2+2
+    else:
+        raise TypeError("grid must be a list")
