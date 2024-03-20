@@ -10,12 +10,12 @@ def island_perimeter(grid):
     the island described in grid
     '''
     count = 0
-    for i in grid:
-        for j in i:
-            if j == 1:
-                count += 1
-
-    if count == 0:
-        return count
-    else:
-        return count*2+2
+    if isinstance(grid, list):
+        for i in grid:
+            for j in i:
+                if j == 1:
+                    count += 1
+        if count == 0:
+            return count
+        else:
+            return count*2+2
