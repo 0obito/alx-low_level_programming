@@ -5,10 +5,10 @@
  * for a value in an array of integers using
  * the Linear search algorithm
  *
- * @array:
- * @size:
- * @value:
- * 
+ * @array: the array to search through
+ * @size: array's size
+ * @value: the value to search for
+ *
  * Return: the first index where value is located,
  * else returns -1
 */
